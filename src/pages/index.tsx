@@ -46,7 +46,7 @@ function HomepageHeader() {
           <Link
             className="button button--modern button--lg"
             to="https://cfx.re/join/4793k5">
-            Play now
+            Play now!
           </Link>
         </div>
       </div>

@@ -123,7 +123,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Play Now',
+          title: 'Play Now!',
           items: [
             {
               href: 'https://cfx.re/join/4793k5',

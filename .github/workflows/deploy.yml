@@ -1,0 +1,39 @@
+name: Build & Deploy docs
+
+# Run on every push to main
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  # 1. Build the image and push it to GitHub Container Registry
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:            # gives this job permission to write packages
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build & push Docker image to GHCR
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/raari97/snrp-docs:latest  # <-- keep lower-case!
+
+  # 2. SSH into the VPS, pull the new image, restart the container
+  deploy:
+    needs: build-and-push   # wait for the image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull and restart on server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host:   ${{ secrets.SSH_HOST }}
+          user:   ${{ secrets.SSH_USER }}
+          key:    ${{ secrets.SSH_KEY }}
+          script: |
+            cd ~/compose
+            docker compose pull docs
+            docker compose up -d docs

@@ -99,9 +99,9 @@ Kidnapping must serve a clear RP purpose — primarily leverage in negotiations 
 
 | Rank | Maximum Ransom Limit |
 | --- | --- |
-| Member | $15,000 Dirty Money |
-| Manager / 2IC | $20,000 Dirty Money |
-| Leader | $30,000 Dirty Money |
+| Member | $5,000 Dirty Money |
+| Manager / 2IC | $10,000 Dirty Money |
+| Leader | $15,000 Dirty Money |
 
 ### Daily Kidnapping Limits
 
@@ -144,7 +144,7 @@ Kidnapping must serve a clear RP purpose — primarily leverage in negotiations 
 
 
 ### Avoiding Forced Escalation
-- Using hostility as an “easy way out” (e.g., turning car boost into a shootout instead of finishing the pursuit because it is the easier option) is prohibited.
+- Using hostility as an “easy way out” (e.g., turning car boost into a shootout instead of finishing the pursuit because it is the easier option) is generally frowned upon. Groups and players engaging in this type of roleplay may be excluded from progression systems.
 - Commit to the style of engagement you initiate — if you start a pursuit, focus on escape rather than forcing combat without cause.
 
 
